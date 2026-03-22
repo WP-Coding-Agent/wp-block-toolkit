@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "developer/card",
+  "version": "1.0.0",
+  "title": "Card",
+  "category": "design",
+  "icon": "index-card",
+  "description": "A card with image, title, description, badge, and link. Use inside a Card Grid.",
+  "parent": ["developer/card-grid"],
+  "supports": {
+    "html": false,
+    "color": { "background": true, "text": true },
+    "spacing": { "padding": true },
+    "typography": { "fontSize": true }
+  },
+  "attributes": {
+    "imageId": { "type": "integer" },
+    "imageUrl": { "type": "string", "default": "" },
+    "heading": { "type": "string", "default": "" },
+    "description": { "type": "string", "default": "" },
+    "linkUrl": { "type": "string", "default": "" },
+    "linkText": { "type": "string", "default": "Learn more" },
+    "badge": { "type": "string", "default": "" }
+  },
+  "textdomain": "block-toolkit",
+  "editorScript": "file:../../../assets/src/card/index.js",
+  "style": "file:../../../assets/src/card/style.css"
+}

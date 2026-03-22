@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "developer/data-table",
+  "version": "1.0.0",
+  "title": "Data Table",
+  "category": "widgets",
+  "icon": "editor-table",
+  "description": "Dynamically query any post type and display results in a sortable, accessible table.",
+  "keywords": ["table", "query", "posts", "data"],
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": { "padding": true, "margin": true }
+  },
+  "attributes": {
+    "postType": { "type": "string", "default": "post" },
+    "columns": {
+      "type": "array",
+      "default": [
+        { "key": "title", "label": "Title" },
+        { "key": "date", "label": "Date" }
+      ]
+    },
+    "metaColumns": {
+      "type": "array",
+      "default": []
+    },
+    "perPage": { "type": "integer", "default": 10 },
+    "orderBy": { "type": "string", "default": "date" },
+    "order": { "type": "string", "default": "desc" },
+    "filters": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "textdomain": "block-toolkit",
+  "editorScript": "file:../../../assets/src/data-table/index.js"
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "developer/card-grid",
+  "version": "1.0.0",
+  "title": "Card Grid",
+  "category": "design",
+  "icon": "grid-view",
+  "description": "A responsive grid layout that contains Card blocks. Control columns, gap, and breakpoints.",
+  "keywords": ["grid", "cards", "layout"],
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": { "padding": true, "margin": true },
+    "color": { "background": true }
+  },
+  "attributes": {
+    "columns": { "type": "integer", "default": 3 },
+    "gap": { "type": "string", "default": "1.5rem" },
+    "minCardWidth": { "type": "string", "default": "280px" }
+  },
+  "textdomain": "block-toolkit",
+  "editorScript": "file:../../../assets/src/card-grid/index.js",
+  "editorStyle": "file:../../../assets/src/card-grid/editor.css",
+  "style": "file:../../../assets/src/card-grid/style.css"
+}

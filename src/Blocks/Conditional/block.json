@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "developer/conditional",
+  "version": "1.0.0",
+  "title": "Conditional Content",
+  "category": "design",
+  "icon": "visibility",
+  "description": "Show or hide inner content based on user role, login status, date range, or custom PHP conditions.",
+  "keywords": ["visibility", "conditional", "role", "restrict"],
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "conditionType": {
+      "type": "string",
+      "default": "logged_in",
+      "enum": ["logged_in", "logged_out", "role", "date_range", "custom"]
+    },
+    "role": { "type": "string", "default": "" },
+    "dateStart": { "type": "string", "default": "" },
+    "dateEnd": { "type": "string", "default": "" },
+    "customFilter": { "type": "string", "default": "" }
+  },
+  "textdomain": "block-toolkit",
+  "editorScript": "file:../../../assets/src/conditional/index.js",
+  "editorStyle": "file:../../../assets/src/conditional/editor.css"
+}

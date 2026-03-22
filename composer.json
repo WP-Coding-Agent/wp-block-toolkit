@@ -1,0 +1,7 @@
+{
+  "name": "wp-coding-agent/wp-block-toolkit",
+  "description": "Production Gutenberg blocks with server-side rendering, dynamic data binding, and InnerBlocks composition",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": { "php": ">=8.0" }
+}

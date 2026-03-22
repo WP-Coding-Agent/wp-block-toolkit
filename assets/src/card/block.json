@@ -24,6 +24,6 @@
     "badge": { "type": "string", "default": "" }
   },
   "textdomain": "block-toolkit",
-  "editorScript": "file:../../../assets/src/card/index.js",
-  "style": "file:../../../assets/src/card/style.css"
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
 }

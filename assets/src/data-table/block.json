@@ -35,5 +35,5 @@
     }
   },
   "textdomain": "block-toolkit",
-  "editorScript": "file:../../../assets/src/data-table/index.js"
+  "editorScript": "file:./index.js"
 }

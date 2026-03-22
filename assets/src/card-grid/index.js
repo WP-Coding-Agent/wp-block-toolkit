@@ -4,6 +4,7 @@ import {
 	useBlockProps,
 	useInnerBlocksProps,
 	InspectorControls,
+	InnerBlocks,
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -11,7 +12,7 @@ import {
 	__experimentalUnitControl as UnitControl,
 } from '@wordpress/components';
 
-import metadata from '../../src/Blocks/CardGrid/block.json';
+import metadata from './block.json';
 
 const ALLOWED_BLOCKS = ['developer/card'];
 const TEMPLATE = [
@@ -86,11 +87,12 @@ function CardGridSave({ attributes }) {
 		},
 	});
 
-	return <div {...blockProps}><InnerBlocksContent /></div>;
+	return (
+		<div {...blockProps}>
+			<InnerBlocks.Content />
+		</div>
+	);
 }
-
-import { InnerBlocks } from '@wordpress/block-editor';
-const InnerBlocksContent = () => <InnerBlocks.Content />;
 
 registerBlockType(metadata.name, {
 	edit: CardGridEdit,

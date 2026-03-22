@@ -3,4 +3,4 @@ declare(strict_types=1);
 
 defined( 'ABSPATH' ) || exit;
 
-register_block_type( __DIR__ . '/block.json' );
+register_block_type( BLOCK_TOOLKIT_DIR . 'build/card-grid' );

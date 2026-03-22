@@ -6,7 +6,7 @@ namespace BlockToolkit\Blocks\Conditional;
 defined( 'ABSPATH' ) || exit;
 
 register_block_type(
-	__DIR__ . '/block.json',
+	BLOCK_TOOLKIT_DIR . 'build/conditional',
 	[
 		'render_callback' => __NAMESPACE__ . '\\render',
 	]

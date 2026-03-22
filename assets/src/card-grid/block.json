@@ -20,7 +20,7 @@
     "minCardWidth": { "type": "string", "default": "280px" }
   },
   "textdomain": "block-toolkit",
-  "editorScript": "file:../../../assets/src/card-grid/index.js",
-  "editorStyle": "file:../../../assets/src/card-grid/editor.css",
-  "style": "file:../../../assets/src/card-grid/style.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
 }

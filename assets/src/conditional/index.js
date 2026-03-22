@@ -4,6 +4,7 @@ import {
 	useBlockProps,
 	useInnerBlocksProps,
 	InspectorControls,
+	InnerBlocks,
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -12,7 +13,7 @@ import {
 	DateTimePicker,
 } from '@wordpress/components';
 
-import metadata from '../../src/Blocks/Conditional/block.json';
+import metadata from './block.json';
 
 const CONDITION_LABELS = {
 	logged_in: __('Logged-in users', 'block-toolkit'),
@@ -95,8 +96,9 @@ function ConditionalEdit({ attributes, setAttributes }) {
 
 registerBlockType(metadata.name, {
 	edit: ConditionalEdit,
-	save: ({ children }) => <div className="wp-block-developer-conditional"><InnerBlocksContent /></div>,
+	save: () => (
+		<div className="wp-block-developer-conditional">
+			<InnerBlocks.Content />
+		</div>
+	),
 });
-
-import { InnerBlocks } from '@wordpress/block-editor';
-const InnerBlocksContent = () => <InnerBlocks.Content />;

@@ -14,7 +14,7 @@ import {
 import ServerSideRender from '@wordpress/server-side-render';
 import { useState } from '@wordpress/element';
 
-import metadata from '../../src/Blocks/DataTable/block.json';
+import metadata from './block.json';
 
 function DataTableEdit({ attributes, setAttributes }) {
 	const { postType, perPage, orderBy, order, columns, metaColumns, filters } = attributes;

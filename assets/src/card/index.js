@@ -15,7 +15,7 @@ import {
 	TextControl,
 } from '@wordpress/components';
 
-import metadata from '../../src/Blocks/Card/block.json';
+import metadata from './block.json';
 
 function CardEdit({ attributes, setAttributes }) {
 	const { imageUrl, imageId, heading, description, linkUrl, linkText, badge } = attributes;

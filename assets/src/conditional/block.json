@@ -24,6 +24,6 @@
     "customFilter": { "type": "string", "default": "" }
   },
   "textdomain": "block-toolkit",
-  "editorScript": "file:../../../assets/src/conditional/index.js",
-  "editorStyle": "file:../../../assets/src/conditional/editor.css"
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
 }

@@ -6,7 +6,7 @@ namespace BlockToolkit\Blocks\DataTable;
 defined( 'ABSPATH' ) || exit;
 
 register_block_type(
-	__DIR__ . '/block.json',
+	BLOCK_TOOLKIT_DIR . 'build/data-table',
 	[
 		'render_callback' => __NAMESPACE__ . '\\render',
 	]
@@ -83,7 +83,7 @@ function render( array $attributes, string $content ): string {
 							<td><?php echo esc_html( get_column_value( $col['key'], get_the_ID() ) ); ?></td>
 						<?php endforeach; ?>
 						<?php foreach ( $meta_columns as $col ) : ?>
-							<td><?php echo esc_html( get_post_meta( get_the_ID(), $col['key'], true ) ); ?></td>
+							<td><?php echo esc_html( (string) get_post_meta( get_the_ID(), $col['key'], true ) ); ?></td>
 						<?php endforeach; ?>
 					</tr>
 				<?php endwhile; ?>
@@ -102,10 +102,10 @@ function get_column_value( string $key, int $post_id ): string {
 	return match ( $key ) {
 		'title'   => get_the_title( $post_id ),
 		'date'    => get_the_date( '', $post_id ),
-		'author'  => get_the_author(),
+		'author'  => (string) get_the_author(),
 		'excerpt' => get_the_excerpt( $post_id ),
-		'status'  => get_post_status( $post_id ),
-		'type'    => get_post_type( $post_id ),
+		'status'  => (string) get_post_status( $post_id ),
+		'type'    => (string) get_post_type( $post_id ),
 		'id'      => (string) $post_id,
 		default   => (string) get_post_meta( $post_id, $key, true ),
 	};
